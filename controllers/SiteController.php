@@ -12,6 +12,11 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
+
+    public function actionSay($target = 'World')
+    {
+        return $this->render('say', ['target' => $target]);
+    }
     /**
      * @inheritdoc
      */
