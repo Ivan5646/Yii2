@@ -63,15 +63,19 @@ class StatusController extends Controller
      */
     public function actionCreate()
     {
+        // When the form is posted, we manually set the created_at and updated_at fields, then we save the data in the database. 
         $model = new Status();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
+ 
+        if ($model->load(Yii::$app->request->post())) {
+          $model->created_at = time();
+          $model->updated_at = time();
+           if ($model->save()) {             
+             return $this->redirect(['view', 'id' => $model->id]);             
+           } 
+        } 
+        return $this->render('create', [
+            'model' => $model,
+        ]);
     }
 
     /**
