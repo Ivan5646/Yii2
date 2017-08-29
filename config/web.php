@@ -28,9 +28,9 @@ $config = [
                 'useFileTransport' => false,
                 'transport' => [
                     'class' => 'Swift_SmtpTransport',
-                    'host' => 'http://127.0.0.1/',
-                    'username' => 'root',
-                    'password' => '',
+                    'host' => 'smtp.gmail.com',
+                    'username' => 'mikedevweb@gmail.com',
+                    'password' => '19871989hey',
                     'port' => '587',
                     'encryption' => 'tls',
                 ],
