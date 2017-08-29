@@ -28,12 +28,12 @@ $config = [
                 'useFileTransport' => false,
                 'transport' => [
                     'class' => 'Swift_SmtpTransport',
-                    'host' => 'your-host-domain e.g. smtp.gmail.com',
-                    'username' => 'your-email-or-username',
-                    'password' => 'your-password',
+                    'host' => 'http://127.0.0.1/',
+                    'username' => 'root',
+                    'password' => '',
                     'port' => '587',
                     'encryption' => 'tls',
-                                ],
+                ],
             ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
